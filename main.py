@@ -1,6 +1,7 @@
 # Python program for caesar cypher
 
 k = 3
+a = 0
 p = 'THE QUICK FOX JUMPED OVER THE LAZY BROWN DOG'
 i = len(p) # number of letters in word
 
@@ -36,21 +37,22 @@ def deCaesar(pt, key):
 
 print ("Plaintext: ")
 print (p)
-
-
-choice = input("""  Choose:
-       1. Encipher
-       2. Decypher
-
-  Input: """)
-
-print ("Cipertext: ",)
-while i != 0:
-  a = 0
-  letter = p[a]
-  a += 1
-  #if choice == 1:
-  enCaesar(letter,k)
-  #else:
-    #deCaesar(letter,k)
-  i-=1
+l=1
+while l != 0:
+  choice = int(input("""\n\n  Choose:
+         1. Encipher
+         2. Decypher
+  
+    Input: """))
+  
+  print ("Cipertext: ",)
+  while i != 0:
+    letter = p[a]
+    a += 1
+    if choice == 1:
+      enCaesar(letter,k)
+    elif choice == 2:
+      deCaesar(letter,k)
+    else:
+      print ("Invalid. Try again")
+    i-=1
