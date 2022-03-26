@@ -18,6 +18,19 @@ def enCaesar(pt, key):
     cipher = chr(add_key)
     print(cipher,end="")
 
+def deCaesar(pt, key):
+  if pt == " ":
+    print(pt, end="")
+  else:
+    ascii_val = ord(pt)
+    add_key = ascii_val - key
+    if add_key < 65:
+      mod =  65 - add_key
+      add_key = 91 - mod
+      
+    cipher = chr(add_key)
+    print(cipher,end="")
+
 
 print ("Plaintext: ")
 print (p)
