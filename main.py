@@ -11,31 +11,31 @@ def deCaesar(pt, key):
     print(pt, end="")
   else:
     ascii_val = ord(pt)
-    print("ASCII VAL of "+ pt + ": ",ascii_val)
+    #print("ASCII VAL of "+ pt + ": ",ascii_val)
     add_key = ascii_val - key
-    print("ASCII VAL - key of "+ pt + ": ",add_key)
+    #print("ASCII VAL - key of "+ pt + ": ",add_key)
     if add_key < 65:
       mod =  65 - add_key
-      print(mod)
+      #print(mod)
       add_key = 91 - mod
       
     cipher = chr(add_key)
-    print("C: ")
-    print(cipher)#,end="")
+    #print("C: ")
+    print(cipher,end="")
 
 print ("Plaintext: ")
 print (p)
 
 
-#choice = input("""  Choose:
- ##     2. Decypher
-#
- # Input: """) 
+choice = input("""  Choose:
+      2. Decypher
+
+  Input: """) 
 
 print ("Cipertext: ",)
 while i != 0:
   letter = p[a]
-  print("Letter: ",letter)
+  #print("Letter: ",letter)
   a += 1
   deCaesar(letter,k)
   i-=1
