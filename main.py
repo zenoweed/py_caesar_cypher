@@ -10,9 +10,7 @@ def enCaesar(pt, key):
     print(pt, end="")
   else:
     ascii_val = ord(pt)
-    #print("ASCII VAL of "+ pt + ": ",ascii_val)
     add_key = ascii_val + key
-    #print("ASCII VAL + key of "+ pt + ": ",add_key)
     if add_key > 90:
       mod = add_key - 90
       add_key = 64 + mod
@@ -20,20 +18,6 @@ def enCaesar(pt, key):
     cipher = chr(add_key)
     print(cipher,end="")
 
-def deCaesar(pt, key):
-  if pt == " ":
-    print(pt, end="")
-  else:
-    ascii_val = ord(pt)
-    #print("ASCII VAL of "+ pt + ": ",ascii_val)
-    add_key = ascii_val + key
-    #print("ASCII VAL + key of "+ pt + ": ",add_key)
-    if add_key > 90:
-      mod = add_key - 90
-      add_key = 64 + mod
-      
-    cipher = chr(add_key)
-    print(cipher,end="")
 
 print ("Plaintext: ")
 print (p)
